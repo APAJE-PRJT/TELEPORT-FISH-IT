@@ -1,0 +1,158 @@
+--// SERVICES
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local player = Players.LocalPlayer
+
+--// =========================
+--// SCRIPT UTAMA (RAYFIELD)
+--// =========================
+local function MainScript()
+
+    local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+    local Window = Rayfield:CreateWindow({
+        Name = "TELEPORT FISH IT - NANAO GAMES",
+        Icon = 84342305212226,
+        LoadingTitle = "TELEPORT FISH IT",
+        LoadingSubtitle = "discord.gg/Hsk4Q5KY2b",
+        ConfigurationSaving = { Enabled = false }
+    })
+
+    --// NOTIF DISCORD TIAP 30 DETIK
+    task.spawn(function()
+        while task.wait(30) do
+            Rayfield:Notify({
+                Title = "JOIN DISCORD NANAO",
+                Content = "https://discord.gg/Hsk4Q5KY2b",
+                Duration = 6
+            })
+        end
+    end)
+
+    --// FUNCTION TELEPORT
+    local function TP(x,y,z)
+        local char = player.Character or player.CharacterAdded:Wait()
+        local hrp = char:WaitForChild("HumanoidRootPart")
+        hrp.CFrame = CFrame.new(x,y,z)
+    end
+
+    --// =========================
+    --// TAB TELEPORT ISLAND
+    --// =========================
+    local IslandTab = Window:CreateTab("TELEPORT ISLAND", 103846705893963)
+
+    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
+    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
+    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
+
+    IslandTab:CreateSection("FISHERMAN")
+    IslandTab:CreateButton({ Name="Fisherman", Callback=function() TP(36,17,2841) end })
+    IslandTab:CreateButton({ Name="Sell Fish", Callback=function() TP(48,17,2867) end })
+    IslandTab:CreateButton({ Name="Buy Baits", Callback=function() TP(112,17,2870) end })
+    IslandTab:CreateButton({ Name="Buy Rods", Callback=function() TP(147,20,2834) end })
+    IslandTab:CreateButton({ Name="Traveling Merchant", Callback=function() TP(-134,3,2765) end })
+
+    IslandTab:CreateSection("GHOSTFINN ROD")
+    IslandTab:CreateButton({ Name="Treasure Room", Callback=function() TP(-3639,-279,-1609) end })
+    IslandTab:CreateButton({ Name="Sisyphus Statue", Callback=function() TP(-3758,-135,-898) end })
+    IslandTab:CreateButton({ Name="Lost Isle", Callback=function() TP(-3655,5,-1055) end })
+
+    IslandTab:CreateSection("ELEMENT ROD")
+    IslandTab:CreateButton({ Name="Ancient Jungle", Callback=function() TP(1470,7,-333) end })
+    IslandTab:CreateButton({ Name="Sacred Temple", Callback=function() TP(1486,-22,-608) end })
+
+    IslandTab:CreateSection("ANCIENT LOCHNESS MONSTER")
+    IslandTab:CreateButton({ Name="Crystalline Passage", Callback=function() TP(6049,-539,4391) end })
+    IslandTab:CreateButton({ Name="Ancient Ruin", Callback=function() TP(6073,-586,4625) end })
+
+    IslandTab:CreateSection("ISLAND PEMULA")
+    IslandTab:CreateButton({ Name="Kohana", Callback=function() TP(-602,3,802) end })
+    IslandTab:CreateButton({ Name="Kohana Volcano", Callback=function() TP(-593,59,127) end })
+    IslandTab:CreateButton({ Name="Ocean", Callback=function() TP(1138,13,2309) end })
+
+    IslandTab:CreateSection("ENCHANT ROD")
+    IslandTab:CreateButton({ Name="Esoteric Depths", Callback=function() TP(2063,25,1377) end })
+    IslandTab:CreateButton({ Name="Enchant Altar", Callback=function() TP(3236,-1303,1400) end })
+    IslandTab:CreateButton({ Name="Evolved Enchant Stone Altar", Callback=function() TP(1479,128,-598) end })
+
+    IslandTab:CreateSection("SHOP")
+    IslandTab:CreateButton({ Name="Ares Rod", Callback=function() TP(-2192,3,3693) end })
+    IslandTab:CreateButton({ Name="Floral Bait", Callback=function() TP(1369,-42,-619) end })
+    IslandTab:CreateButton({ Name="Bamboo Rod", Callback=function() TP(1584,-42,-644) end })
+
+    IslandTab:CreateSection("LAINNYA")
+    IslandTab:CreateButton({ Name="Crater Island", Callback=function() TP(1088,6,5071) end })
+    IslandTab:CreateButton({ Name="Tropical Grove", Callback=function() TP(-2066,7,3651) end })
+    IslandTab:CreateButton({ Name="Coral Reefs", Callback=function() TP(-2946,63,2212) end })
+
+    --// =========================
+    --// TAB QUEST
+    --// =========================
+    local QuestTab = Window:CreateTab("QUEST ANCIENT JUNGLE", 127617422859576)
+
+    QuestTab:CreateSection("QUEST")
+    QuestTab:CreateButton({ Name="Hourglass Diamond Artifact", Callback=function() TP(1485,8,-861) end })
+    QuestTab:CreateButton({ Name="Crescent Artifact", Callback=function() TP(1421,31,79) end })
+    QuestTab:CreateButton({ Name="Diamond Artifact", Callback=function() TP(1819,8,-284) end })
+    QuestTab:CreateButton({ Name="Arrow Artifact", Callback=function() TP(898,8,-362) end })
+
+    QuestTab:CreateSection("PINTU SETELAH QUEST")
+    QuestTab:CreateButton({ Name="Sacred Temple Door", Callback=function() TP(1490,8,-515) end })
+end
+
+--// =========================
+--// POPUP AWAL
+--// =========================
+local gui = Instance.new("ScreenGui", CoreGui)
+gui.Name = "JoinDiscordPopup"
+gui.DisplayOrder = 999999
+gui.ResetOnSpawn = false
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0,360,0,180)
+frame.Position = UDim2.new(0.5,-180,0.5,-90)
+frame.BackgroundColor3 = Color3.fromRGB(18,18,18)
+frame.BorderSizePixel = 0
+frame.ZIndex = 50
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0,14)
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1,0,0,60)
+title.Text = "JOIN DISCORD"
+title.Font = Enum.Font.GothamBold
+title.TextSize = 20
+title.TextColor3 = Color3.new(1,1,1)
+title.BackgroundTransparency = 1
+title.ZIndex = 51
+
+local link = Instance.new("TextLabel", frame)
+link.Position = UDim2.new(0,0,0,60)
+link.Size = UDim2.new(1,0,0,40)
+link.Text = "https://discord.gg/Hsk4Q5KY2b"
+link.Font = Enum.Font.Gotham
+link.TextSize = 14
+link.TextColor3 = Color3.fromRGB(0,170,255)
+link.BackgroundTransparency = 1
+link.ZIndex = 51
+
+local btn = Instance.new("TextButton", frame)
+btn.Position = UDim2.new(0.5,-90,1,-60)
+btn.Size = UDim2.new(0,180,0,42)
+btn.Text = "SALIN & BUKA SCRIPT"
+btn.Font = Enum.Font.GothamBold
+btn.TextSize = 14
+btn.TextColor3 = Color3.new(1,1,1)
+btn.BackgroundColor3 = Color3.fromRGB(0,170,255)
+btn.BorderSizePixel = 0
+Instance.new("UICorner", btn).CornerRadius = UDim.new(0,12)
+btn.ZIndex = 51
+
+btn.MouseButton1Click:Connect(function()
+    if setclipboard then
+        setclipboard("https://discord.gg/Hsk4Q5KY2b")
+    end
+    gui:Destroy()
+    task.wait(0.15)
+    MainScript()
+end)
