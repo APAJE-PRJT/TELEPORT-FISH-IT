@@ -41,9 +41,9 @@ local function MainScript()
     --// =========================
     local IslandTab = Window:CreateTab("TELEPORT ISLAND", 103846705893963)
 
-    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
-    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
-    IslandTab:CreateSection("UNTUK PIRATE ISLAND NANTI YAA BELUM AKU TELUSURIN🙏")
+    IslandTab:CreateSection("NEW ISLAND")
+    IslandTab:CreateButton({ Name="PIRATE COVE", Callback=function() TP(3496, 4, 3450) end })
+    IslandTab:CreateButton({ Name="CRYSTAL DEPTHS", Callback=function() TP(5758, -905, 15390) end })
 
     IslandTab:CreateSection("FISHERMAN")
     IslandTab:CreateButton({ Name="Fisherman", Callback=function() TP(36,17,2841) end })
@@ -51,6 +51,10 @@ local function MainScript()
     IslandTab:CreateButton({ Name="Buy Baits", Callback=function() TP(112,17,2870) end })
     IslandTab:CreateButton({ Name="Buy Rods", Callback=function() TP(147,20,2834) end })
     IslandTab:CreateButton({ Name="Traveling Merchant", Callback=function() TP(-134,3,2765) end })
+
+    IslandTab:CreateSection("KOHANA")
+    IslandTab:CreateButton({ Name="Kohana", Callback=function() TP(-602,3,802) end })
+    IslandTab:CreateButton({ Name="Kohana Volcano", Callback=function() TP(-618, 49, 191) end })
 
     IslandTab:CreateSection("GHOSTFINN ROD")
     IslandTab:CreateButton({ Name="Treasure Room", Callback=function() TP(-3639,-279,-1609) end })
@@ -60,35 +64,27 @@ local function MainScript()
     IslandTab:CreateSection("ELEMENT ROD")
     IslandTab:CreateButton({ Name="Ancient Jungle", Callback=function() TP(1470,7,-333) end })
     IslandTab:CreateButton({ Name="Sacred Temple", Callback=function() TP(1486,-22,-608) end })
+    IslandTab:CreateButton({ Name="UNDERGROUND CELLAR", Callback=function() TP(2110, -91, -700) end })
 
     IslandTab:CreateSection("ANCIENT LOCHNESS MONSTER")
     IslandTab:CreateButton({ Name="Crystalline Passage", Callback=function() TP(6049,-539,4391) end })
     IslandTab:CreateButton({ Name="Ancient Ruin", Callback=function() TP(6073,-586,4625) end })
-
-    IslandTab:CreateSection("ISLAND PEMULA")
-    IslandTab:CreateButton({ Name="Kohana", Callback=function() TP(-602,3,802) end })
-    IslandTab:CreateButton({ Name="Kohana Volcano", Callback=function() TP(-593,59,127) end })
-    IslandTab:CreateButton({ Name="Ocean", Callback=function() TP(1138,13,2309) end })
 
     IslandTab:CreateSection("ENCHANT ROD")
     IslandTab:CreateButton({ Name="Esoteric Depths", Callback=function() TP(2063,25,1377) end })
     IslandTab:CreateButton({ Name="Enchant Altar", Callback=function() TP(3236,-1303,1400) end })
     IslandTab:CreateButton({ Name="Evolved Enchant Stone Altar", Callback=function() TP(1479,128,-598) end })
 
-    IslandTab:CreateSection("SHOP")
-    IslandTab:CreateButton({ Name="Ares Rod", Callback=function() TP(-2192,3,3693) end })
-    IslandTab:CreateButton({ Name="Floral Bait", Callback=function() TP(1369,-42,-619) end })
-    IslandTab:CreateButton({ Name="Bamboo Rod", Callback=function() TP(1584,-42,-644) end })
-
     IslandTab:CreateSection("LAINNYA")
-    IslandTab:CreateButton({ Name="Crater Island", Callback=function() TP(1088,6,5071) end })
+    IslandTab:CreateButton({ Name="Crater Island", Callback=function() TP(1078, 3, 5070) end })
     IslandTab:CreateButton({ Name="Tropical Grove", Callback=function() TP(-2066,7,3651) end })
-    IslandTab:CreateButton({ Name="Coral Reefs", Callback=function() TP(-2946,63,2212) end })
+    IslandTab:CreateButton({ Name="Coral Reefs", Callback=function() TP(-3151, 2, 2272) end })
+    IslandTab:CreateButton({ Name="Ocean", Callback=function() TP(1138,13,2309) end })
 
     --// =========================
     --// TAB QUEST
     --// =========================
-    local QuestTab = Window:CreateTab("QUEST ANCIENT JUNGLE", 127617422859576)
+    local QuestTab = Window:CreateTab("QUEST JUNGLE", 127617422859576)
 
     QuestTab:CreateSection("QUEST")
     QuestTab:CreateButton({ Name="Hourglass Diamond Artifact", Callback=function() TP(1485,8,-861) end })
@@ -98,6 +94,30 @@ local function MainScript()
 
     QuestTab:CreateSection("PINTU SETELAH QUEST")
     QuestTab:CreateButton({ Name="Sacred Temple Door", Callback=function() TP(1490,8,-515) end })
+
+    local ShopTab = Window:CreateTab("SHOP", 128420521375441)
+    ShopTab:CreateButton({ Name="SEABRAZE ROD (95K)", Callback=function() TP(-2132, 6, 3706) end })
+    ShopTab:CreateButton({ Name="ARES ROD (3M)", Callback=function() TP(-2196, 4, 3698) end })
+    ShopTab:CreateButton({ Name="Floral Bait (4M)", Callback=function() TP(1369,-42,-619) end })
+    ShopTab:CreateButton({ Name="Bamboo Rod (12M)", Callback=function() TP(1584,-42,-644) end })
+
+    local NpcTab = Window:CreateTab("NPC", 80451686744860)
+    NpcTab:CreateSection("CRYSTAL DEPTHS - PIRATE COVE")
+    NpcTab:CreateButton({ Name="NPC DORIAN", Callback=function() TP(5722, -905, 15414) end })
+    NpcTab:CreateButton({ Name="NPC GHASTLY PIRATES", Callback=function() TP(5700, -892, 15298) end })
+    NpcTab:CreateSection("CORAL REEFS")
+    NpcTab:CreateButton({ Name="NPC RAM", Callback=function() TP(-2837, 47, 1960) end })
+    NpcTab:CreateSection("TROPICAL GROVE")
+    NpcTab:CreateButton({ Name="NPC CAPT JACK", Callback=function() TP(-2076, 6, 3650) end })
+    NpcTab:CreateSection("CRATER ISLAND")
+    NpcTab:CreateButton({ Name="NPC SCIENTIST SAMANTHA", Callback=function() TP(853, 30, 4930) end })
+    NpcTab:CreateSection("ANCIENT JUNGLE")
+    NpcTab:CreateButton({ Name="NPC TEMPLE GUARDIAN", Callback=function() TP(1492, 128, -592) end })
+    NpcTab:CreateButton({ Name="NPC FORAGER JEN", Callback=function() TP(1237, 8, -217) end })
+    NpcTab:CreateButton({ Name="NPC ASTRID", Callback=function() TP(1246, 8, -185) end })
+    NpcTab:CreateSection("KOHANA VOLCANO")
+    NpcTab:CreateButton({ Name="NPC VOLCANIC FISHERMAN", Callback=function() TP(-657, 16, 571) end })
+    NpcTab:CreateButton({ Name="NPC HAZMAT LEADER", Callback=function() TP(-411, 7, 125) end })
 end
 
 --// =========================
@@ -129,7 +149,7 @@ title.ZIndex = 51
 local link = Instance.new("TextLabel", frame)
 link.Position = UDim2.new(0,0,0,60)
 link.Size = UDim2.new(1,0,0,40)
-link.Text = "https://discord.gg/Hsk4Q5KY2b"
+link.Text = "REPORT UPDATE SUNG DC AJA"
 link.Font = Enum.Font.Gotham
 link.TextSize = 14
 link.TextColor3 = Color3.fromRGB(0,170,255)
