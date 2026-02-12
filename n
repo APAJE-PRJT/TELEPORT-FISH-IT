@@ -51,10 +51,16 @@ local function MainScript()
     IslandTab:CreateButton({ Name="Buy Baits", Callback=function() TP(112,17,2870) end })
     IslandTab:CreateButton({ Name="Buy Rods", Callback=function() TP(147,20,2834) end })
     IslandTab:CreateButton({ Name="Traveling Merchant", Callback=function() TP(-134,3,2765) end })
+    NpcTab:CreateButton({ Name="TOKO UTILITIES", Callback=function() TP(-48, 20, 2873) end })
+    NpcTab:CreateButton({ Name="TOKO LENTERA", Callback=function() TP(10, 25, 2943) end })
+    NpcTab:CreateButton({ Name="TOKO RAMUAN", Callback=function() TP(-7, 17, 2880) end })
 
     IslandTab:CreateSection("KOHANA")
     IslandTab:CreateButton({ Name="Kohana", Callback=function() TP(-602,3,802) end })
-    IslandTab:CreateButton({ Name="Kohana Volcano", Callback=function() TP(-618, 49, 191) end })
+    IslandTab:CreateButton({ Name="Kohana Volcano", Callback=function() TP(-549, 19, 144) end })
+    IslandTab:CreateButton({ Name="VOLCANIC CAVERN", Callback=function() TP(1108, 86, -10245) end })
+    IslandTab:CreateButton({ Name="LAVA BASIN", Callback=function() TP(950, 74, -10216) end })
+    IslandTab:CreateButton({ Name="LAVA BASIN - CRAFTING BENCH", Callback=function() TP(860, 97, -10172) end })
 
     IslandTab:CreateSection("GHOSTFINN ROD")
     IslandTab:CreateButton({ Name="Treasure Room", Callback=function() TP(-3639,-279,-1609) end })
@@ -118,6 +124,10 @@ local function MainScript()
     NpcTab:CreateSection("KOHANA VOLCANO")
     NpcTab:CreateButton({ Name="NPC VOLCANIC FISHERMAN", Callback=function() TP(-657, 16, 571) end })
     NpcTab:CreateButton({ Name="NPC HAZMAT LEADER", Callback=function() TP(-411, 7, 125) end })
+    NpcTab:CreateButton({ Name="NPC REACTOR MAN", Callback=function() TP(1119, 86, -10232) end })
+    NpcTab:CreateSection("VOLCANIC CAVERN")
+    NpcTab:CreateButton({ Name="NPC MAGMA FISHERMAN", Callback=function() TP(1099, 86, -10259) end })
+    NpcTab:CreateButton({ Name="LAVA DWELLER", Callback=function() TP(1123, 87, -10231) end })
 end
 
 --// =========================
